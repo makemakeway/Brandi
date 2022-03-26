@@ -16,6 +16,7 @@
 		C21F76BB27EF835D00F61A5B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C21F76BA27EF835D00F61A5B /* RxSwift */; };
 		C21F76BE27EF8FC100F61A5B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76BD27EF8FC100F61A5B /* GridLayout.swift */; };
 		C21F76C127EF8FE600F61A5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C027EF8FE600F61A5B /* Constants.swift */; };
+		C21F76C427EF907400F61A5B /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C327EF907400F61A5B /* ViewRepresentable.swift */; };
 		C2EDD01A27EC662100E2EB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01927EC662100E2EB6B /* AppDelegate.swift */; };
 		C2EDD01C27EC662100E2EB6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */; };
 		C2EDD01E27EC662100E2EB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01D27EC662100E2EB6B /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		C21F76AA27EF832100F61A5B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C21F76BD27EF8FC100F61A5B /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		C21F76C027EF8FE600F61A5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C21F76C327EF907400F61A5B /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		C2EDD01627EC662100E2EB6B /* Brandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EDD01927EC662100E2EB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		C21F76C227EF905D00F61A5B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C21F76C327EF907400F61A5B /* ViewRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C2EDD00D27EC662100E2EB6B = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		C2EDD01827EC662100E2EB6B /* Brandi */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76C227EF905D00F61A5B /* Protocols */,
 				C21F76BF27EF8FDE00F61A5B /* Constants */,
 				C21F76A727EF82DE00F61A5B /* View */,
 				C21F76A627EF82DB00F61A5B /* ViewModel */,
@@ -337,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21F76AB27EF832100F61A5B /* SearchView.swift in Sources */,
+				C21F76C427EF907400F61A5B /* ViewRepresentable.swift in Sources */,
 				C2EDD01E27EC662100E2EB6B /* ViewController.swift in Sources */,
 				C2EDD01A27EC662100E2EB6B /* AppDelegate.swift in Sources */,
 				C21F76BE27EF8FC100F61A5B /* GridLayout.swift in Sources */,

@@ -8,9 +8,8 @@
 import UIKit
 
 import SnapKit
-import Then
 
-final class SearchView: UIView {
+final class SearchView: UIView, ViewRepresentable {
     
     private let collectionView: UICollectionView = UICollectionView(frame: .zero,
                                                                     collectionViewLayout: UICollectionViewLayout.gridLayout())
