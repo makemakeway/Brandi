@@ -9,30 +9,21 @@ import UIKit
 
 extension UICollectionViewLayout {
     static func gridLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(
-            widthDimension: .absolute(Constants.GridSize.itemWidth),
-            heightDimension: .absolute(Constants.GridSize.itemWidth)
-        )
+        let ratio = Constants.GridSize.itemWidthRatio
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(ratio),
+                                              heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(Constants.GridSize.itemWidth)
-        )
-        
+        let inset = Constants.GridSize.inset
+        item.contentInsets = NSDirectionalEdgeInsets(top: inset,
+                                                     leading: inset,
+                                                     bottom: inset,
+                                                     trailing: inset)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalWidth(ratio))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(Constants.GridSize.itemSpacing)
-        
         let section = NSCollectionLayoutSection(group: group)
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: Constants.GridSize.padding,
-                                                        leading: Constants.GridSize.padding,
-                                                        bottom: Constants.GridSize.padding,
-                                                        trailing: Constants.GridSize.padding)
-        section.interGroupSpacing = Constants.GridSize.itemSpacing
-        
         let layout = UICollectionViewCompositionalLayout(section: section)
-        
         return layout
+        
     }
 }

@@ -10,7 +10,8 @@ import UIKit
 struct Constants {
     struct GridSize {
         static let padding: CGFloat = 12
-        static let itemSpacing: CGFloat = 8
-        static let itemWidth: CGFloat = (UIScreen.main.bounds.width - CGFloat(padding * 2) - CGFloat(itemSpacing * 2)) / 3
+        static let inset: CGFloat = 2
+        static let itemWidthRatio: CGFloat = 1/3
+        static let cornerRadius: CGFloat = 8
     }
 }
