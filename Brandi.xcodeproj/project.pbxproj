@@ -17,6 +17,8 @@
 		C21F76BE27EF8FC100F61A5B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76BD27EF8FC100F61A5B /* GridLayout.swift */; };
 		C21F76C127EF8FE600F61A5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C027EF8FE600F61A5B /* Constants.swift */; };
 		C21F76C427EF907400F61A5B /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C327EF907400F61A5B /* ViewRepresentable.swift */; };
+		C21F76C627EF922000F61A5B /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */; };
+		C21F76C927EF949200F61A5B /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */; };
 		C2EDD01A27EC662100E2EB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01927EC662100E2EB6B /* AppDelegate.swift */; };
 		C2EDD01C27EC662100E2EB6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */; };
 		C2EDD02327EC662200E2EB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EDD02227EC662200E2EB6B /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		C21F76BD27EF8FC100F61A5B /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		C21F76C027EF8FE600F61A5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C21F76C327EF907400F61A5B /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
+		C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		C2EDD01627EC662100E2EB6B /* Brandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EDD01927EC662100E2EB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				C21F76BC27EF8FAA00F61A5B /* ReusableView */,
 				C21F76A827EF82F100F61A5B /* SearchViewController.swift */,
 				C21F76AA27EF832100F61A5B /* SearchView.swift */,
+				C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +155,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		C21F76C727EF947E00F61A5B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C2EDD00D27EC662100E2EB6B = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 		C2EDD01827EC662100E2EB6B /* Brandi */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76C727EF947E00F61A5B /* Extension */,
 				C21F76C227EF905D00F61A5B /* Protocols */,
 				C21F76BF27EF8FDE00F61A5B /* Constants */,
 				C21F76A727EF82DE00F61A5B /* View */,
@@ -350,7 +364,9 @@
 				C21F76BE27EF8FC100F61A5B /* GridLayout.swift in Sources */,
 				C21F76C127EF8FE600F61A5B /* Constants.swift in Sources */,
 				C21F76A927EF82F100F61A5B /* SearchViewController.swift in Sources */,
+				C21F76C627EF922000F61A5B /* SearchCollectionViewCell.swift in Sources */,
 				C2EDD01C27EC662100E2EB6B /* SceneDelegate.swift in Sources */,
+				C21F76C927EF949200F61A5B /* UICollectionViewCell+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
