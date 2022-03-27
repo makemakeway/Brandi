@@ -11,11 +11,27 @@ import SnapKit
 
 final class SearchView: UIView, ViewRepresentable {
     
-    private let collectionView: UICollectionView = UICollectionView(frame: .zero,
+    let collectionView: UICollectionView = UICollectionView(frame: .zero,
                                                                     collectionViewLayout: UICollectionViewLayout.gridLayout())
     
+    let searchBar = UISearchBar()
+    
+    func searchBarConfig() {
+        searchBar.placeholder = "검색"
+        searchBar.autocapitalizationType = .none
+        searchBar.autocorrectionType = .no
+    }
+    
+    func collectionViewConfig() {
+        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.reuseIdentifier)
+        collectionView.keyboardDismissMode = .onDrag
+    }
+    
     func setUp() {
+        self.backgroundColor = .white
         addSubview(collectionView)
+        collectionViewConfig()
+        searchBarConfig()
     }
     
     func setConstraints() {
