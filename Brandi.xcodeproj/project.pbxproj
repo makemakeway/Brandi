@@ -19,6 +19,17 @@
 		C21F76C427EF907400F61A5B /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C327EF907400F61A5B /* ViewRepresentable.swift */; };
 		C21F76C627EF922000F61A5B /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */; };
 		C21F76C927EF949200F61A5B /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */; };
+		C21F76CB27F05BD900F61A5B /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76CA27F05BD900F61A5B /* SearchData.swift */; };
+		C21F76CE27F05CC100F61A5B /* KakaoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76CD27F05CC100F61A5B /* KakaoAPIService.swift */; };
+		C21F76D127F0600B00F61A5B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C21F76D027F0600B00F61A5B /* Alamofire */; };
+		C21F76D327F061DB00F61A5B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76D227F061DB00F61A5B /* APIKey.swift */; };
+		C21F76D527F063E700F61A5B /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76D427F063E700F61A5B /* Connectivity.swift */; };
+		C21F76D727F0664A00F61A5B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76D627F0664900F61A5B /* SearchViewModel.swift */; };
+		C21F76D927F0667B00F61A5B /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76D827F0667B00F61A5B /* ViewModelType.swift */; };
+		C21F76DC27F08BE800F61A5B /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = C21F76DB27F08BE800F61A5B /* Toast */; };
+		C21F76DE27F0982B00F61A5B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76DD27F0982B00F61A5B /* Section.swift */; };
+		C21F76E327F0BD5A00F61A5B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E227F0BD5A00F61A5B /* DetailView.swift */; };
+		C21F76E727F0DE2C00F61A5B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E627F0DE2C00F61A5B /* DetailViewModel.swift */; };
 		C2EDD01A27EC662100E2EB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01927EC662100E2EB6B /* AppDelegate.swift */; };
 		C2EDD01C27EC662100E2EB6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */; };
 		C2EDD02327EC662200E2EB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EDD02227EC662200E2EB6B /* Assets.xcassets */; };
@@ -53,6 +64,15 @@
 		C21F76C327EF907400F61A5B /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		C21F76CA27F05BD900F61A5B /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
+		C21F76CD27F05CC100F61A5B /* KakaoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIService.swift; sourceTree = "<group>"; };
+		C21F76D227F061DB00F61A5B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		C21F76D427F063E700F61A5B /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		C21F76D627F0664900F61A5B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		C21F76D827F0667B00F61A5B /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		C21F76DD27F0982B00F61A5B /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		C21F76E227F0BD5A00F61A5B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C21F76E627F0DE2C00F61A5B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C2EDD01627EC662100E2EB6B /* Brandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EDD01927EC662100E2EB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EDD01B27EC662100E2EB6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +94,9 @@
 				C21F76BB27EF835D00F61A5B /* RxSwift in Frameworks */,
 				C21F76B927EF835D00F61A5B /* RxRelay in Frameworks */,
 				C21F76B427EF834E00F61A5B /* Kingfisher in Frameworks */,
+				C21F76D127F0600B00F61A5B /* Alamofire in Frameworks */,
 				C21F76B727EF835D00F61A5B /* RxCocoa in Frameworks */,
+				C21F76DC27F08BE800F61A5B /* Toast in Frameworks */,
 				C21F76B127EF834300F61A5B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +131,7 @@
 		C21F76A527EF82D800F61A5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76CA27F05BD900F61A5B /* SearchData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +139,8 @@
 		C21F76A627EF82DB00F61A5B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76D627F0664900F61A5B /* SearchViewModel.swift */,
+				C21F76E627F0DE2C00F61A5B /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -123,10 +148,9 @@
 		C21F76A727EF82DE00F61A5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76E027F0BAD400F61A5B /* Detail */,
+				C21F76DF27F0BAC700F61A5B /* Search */,
 				C21F76BC27EF8FAA00F61A5B /* ReusableView */,
-				C21F76A827EF82F100F61A5B /* SearchViewController.swift */,
-				C21F76AA27EF832100F61A5B /* SearchView.swift */,
-				C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C21F76C027EF8FE600F61A5B /* Constants.swift */,
+				C21F76D227F061DB00F61A5B /* APIKey.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -151,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C21F76C327EF907400F61A5B /* ViewRepresentable.swift */,
+				C21F76D827F0667B00F61A5B /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -161,6 +187,34 @@
 				C21F76C827EF949200F61A5B /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C21F76CC27F05CA800F61A5B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C21F76CD27F05CC100F61A5B /* KakaoAPIService.swift */,
+				C21F76D427F063E700F61A5B /* Connectivity.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C21F76DF27F0BAC700F61A5B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C21F76DD27F0982B00F61A5B /* Section.swift */,
+				C21F76A827EF82F100F61A5B /* SearchViewController.swift */,
+				C21F76AA27EF832100F61A5B /* SearchView.swift */,
+				C21F76C527EF922000F61A5B /* SearchCollectionViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C21F76E027F0BAD400F61A5B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C21F76E227F0BD5A00F61A5B /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		C2EDD00D27EC662100E2EB6B = {
@@ -186,6 +240,7 @@
 		C2EDD01827EC662100E2EB6B /* Brandi */ = {
 			isa = PBXGroup;
 			children = (
+				C21F76CC27F05CA800F61A5B /* Network */,
 				C21F76C727EF947E00F61A5B /* Extension */,
 				C21F76C227EF905D00F61A5B /* Protocols */,
 				C21F76BF27EF8FDE00F61A5B /* Constants */,
@@ -238,6 +293,8 @@
 				C21F76B627EF835D00F61A5B /* RxCocoa */,
 				C21F76B827EF835D00F61A5B /* RxRelay */,
 				C21F76BA27EF835D00F61A5B /* RxSwift */,
+				C21F76D027F0600B00F61A5B /* Alamofire */,
+				C21F76DB27F08BE800F61A5B /* Toast */,
 			);
 			productName = Brandi;
 			productReference = C2EDD01627EC662100E2EB6B /* Brandi.app */;
@@ -315,6 +372,8 @@
 				C21F76AF27EF834300F61A5B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C21F76B227EF834E00F61A5B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				C21F76B527EF835D00F61A5B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C21F76CF27F0600A00F61A5B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C21F76DA27F08BE800F61A5B /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = C2EDD01727EC662100E2EB6B /* Products */;
 			projectDirPath = "";
@@ -360,12 +419,21 @@
 			files = (
 				C21F76AB27EF832100F61A5B /* SearchView.swift in Sources */,
 				C21F76C427EF907400F61A5B /* ViewRepresentable.swift in Sources */,
+				C21F76E327F0BD5A00F61A5B /* DetailView.swift in Sources */,
+				C21F76DE27F0982B00F61A5B /* Section.swift in Sources */,
 				C2EDD01A27EC662100E2EB6B /* AppDelegate.swift in Sources */,
+				C21F76CE27F05CC100F61A5B /* KakaoAPIService.swift in Sources */,
+				C21F76CB27F05BD900F61A5B /* SearchData.swift in Sources */,
+				C21F76E727F0DE2C00F61A5B /* DetailViewModel.swift in Sources */,
 				C21F76BE27EF8FC100F61A5B /* GridLayout.swift in Sources */,
 				C21F76C127EF8FE600F61A5B /* Constants.swift in Sources */,
 				C21F76A927EF82F100F61A5B /* SearchViewController.swift in Sources */,
+				C21F76D927F0667B00F61A5B /* ViewModelType.swift in Sources */,
+				C21F76D727F0664A00F61A5B /* SearchViewModel.swift in Sources */,
+				C21F76D527F063E700F61A5B /* Connectivity.swift in Sources */,
 				C21F76C627EF922000F61A5B /* SearchCollectionViewCell.swift in Sources */,
 				C2EDD01C27EC662100E2EB6B /* SceneDelegate.swift in Sources */,
+				C21F76D327F061DB00F61A5B /* APIKey.swift in Sources */,
 				C21F76C927EF949200F61A5B /* UICollectionViewCell+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -520,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -728,6 +796,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		C21F76CF27F0600A00F61A5B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C21F76DA27F08BE800F61A5B /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -755,6 +839,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C21F76B527EF835D00F61A5B /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		C21F76D027F0600B00F61A5B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C21F76CF27F0600A00F61A5B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C21F76DB27F08BE800F61A5B /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C21F76DA27F08BE800F61A5B /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -28,7 +28,6 @@ final class SearchView: UIView, ViewRepresentable {
     }
     
     func setUp() {
-        self.backgroundColor = .white
         addSubview(collectionView)
         collectionViewConfig()
         searchBarConfig()

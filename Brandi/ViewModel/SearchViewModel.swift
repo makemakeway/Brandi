@@ -41,6 +41,9 @@ final class SearchViewModel: ViewModelType {
                 case .success(let value):
                     owner.input.pageNumber.accept(1)
                     owner.output.searchData.accept(value)
+                    if value.documents.isEmpty {
+                        owner.output.errorMessage.accept(KakaoAPIService.APIError.emptyData.rawValue)
+                    }
                 case .failure(let error):
                     owner.output.errorMessage.accept(error.rawValue)
                 }

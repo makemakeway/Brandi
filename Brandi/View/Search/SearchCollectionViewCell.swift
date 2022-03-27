@@ -12,7 +12,7 @@ import SnapKit
 
 final class SearchCollectionViewCell: UICollectionViewCell, ViewRepresentable {
     
-    private let imageView: UIImageView = {
+    let imageView: UIImageView = {
         let view: UIImageView = UIImageView()
         view.contentMode = .scaleToFill
         view.backgroundColor = .gray
