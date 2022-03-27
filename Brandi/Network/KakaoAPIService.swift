@@ -22,6 +22,7 @@ final class KakaoAPIService {
         case serviceUnavailable
         case networkConnection
         case unknownError
+        case emptyData = "검색 결과가 없습니다."
     }
     
     static let shared = KakaoAPIService()
