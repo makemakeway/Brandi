@@ -14,4 +14,13 @@ struct Constants {
         static let itemWidthRatio: CGFloat = 1/3
         static let cornerRadius: CGFloat = 8
     }
+    
+    struct Network {
+        static let url: String = "https://dapi.kakao.com/v2/search/image"
+        static let header: String = "Authorization"
+    }
+    
+    struct Page {
+        static let size: Int = 30
+    }
 }

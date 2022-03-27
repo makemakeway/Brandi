@@ -14,25 +14,27 @@ final class SearchCollectionViewCell: UICollectionViewCell, ViewRepresentable {
     
     private let imageView: UIImageView = {
         let view: UIImageView = UIImageView()
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleToFill
         view.backgroundColor = .gray
         view.layer.cornerRadius = Constants.GridSize.cornerRadius
         return view
     }()
     
-    private var mockImage: UIImage? = UIImage(systemName: "person")
-    
     func setUp() {
         addSubview(imageView)
-        imageView.kf.setImage(with: URL(string: "hdh"),
-                              placeholder: mockImage,
-                              options: [])
+
     }
     
     func setConstraints() {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func configure(url: String) {
+        imageView.kf.setImage(with: URL(string: url),
+                              placeholder: UIImage(named: "placeholder"),
+                              options: [])
     }
     
     override init(frame: CGRect) {

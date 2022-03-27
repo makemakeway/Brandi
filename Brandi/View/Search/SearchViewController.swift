@@ -33,7 +33,6 @@ final class SearchViewController: UIViewController {
             .bind(with: self) { owner, args in
                 let indexPath = args.at
                 owner.fetchNextPage(indexPath: indexPath.item)
-                print(indexPath.item)
             }
             .disposed(by: disposeBag)
         
@@ -49,7 +48,11 @@ final class SearchViewController: UIViewController {
                 var snapShot = NSDiffableDataSourceSnapshot<Section, Document>()
                 snapShot.appendSections([.first])
                 snapShot.appendItems(data.documents, toSection: .first)
-                owner.dataSource.apply(snapShot, animatingDifferences: true)
+                owner.dataSource.apply(snapShot, animatingDifferences: true) {
+                    if !(data.documents.isEmpty) {
+                        owner.mainView.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
+                    }
+                }
             }
             .disposed(by: disposeBag)
         
