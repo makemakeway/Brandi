@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import Toast
+import SwiftUI
 
 final class SearchViewController: UIViewController {
     
@@ -33,6 +34,28 @@ final class SearchViewController: UIViewController {
             .bind(with: self) { owner, args in
                 let indexPath = args.at
                 owner.fetchNextPage(indexPath: indexPath.item)
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.collectionView.rx.itemSelected
+            .bind(with: self) { owner, indexPath in
+                guard let document = owner.dataSource.itemIdentifier(for: indexPath) else { return }
+                let detailView = UIHostingController(rootView: DetailView(document: document))
+                detailView.modalPresentationStyle = .fullScreen
+                self.present(detailView, animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.collectionView.rx.didEndDisplayingCell
+            .bind(with: self) { owner, args in
+                guard let cell = args.cell as? SearchCollectionViewCell else { return }
+                cell.imageView.kf.cancelDownloadTask()
+            }
+            .disposed(by: disposeBag)
+        
+        mainView.searchBar.rx.searchButtonClicked
+            .bind(with: self) { owner, _ in
+                owner.mainView.searchBar.resignFirstResponder()
             }
             .disposed(by: disposeBag)
         
@@ -76,9 +99,7 @@ final class SearchViewController: UIViewController {
     func dataSourceConfig() {
         self.dataSource = UICollectionViewDiffableDataSource<Section, Document>(collectionView: mainView.collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.reuseIdentifier, for: indexPath) as? SearchCollectionViewCell else { return UICollectionViewCell() }
-            
             cell.configure(url: itemIdentifier.thumbnailURL)
-            
             return cell
         })
     }
