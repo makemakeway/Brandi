@@ -12,7 +12,7 @@ import RxSwift
 
 final class KakaoAPIService {
     
-    enum APIError: Error {
+    enum APIError: String, Error {
         case badRequest
         case unAuthorized
         case forbidden
@@ -49,7 +49,7 @@ final class KakaoAPIService {
         }
     }
     
-    func fetchSearchResponse(query: String, page: Int = 1, size: Int = 30) -> Single<SearchData?> {
+    func fetchSearchResponse(query: String, page: Int = 1, size: Int = 30) -> Single<Result<SearchData, APIError>> {
         return Single.create { single in
             if !(Connectivity.isConnectedToInternet) {
                 single(.failure(APIError.networkConnection))
@@ -73,7 +73,7 @@ final class KakaoAPIService {
                     if let error = self?.apiErrorHandler(status: response.response?.statusCode ?? 0) {
                         single(.failure(error))
                     }
-                    single(.success(response.value))
+                    single(.success(.success(response.value!)))
                 }
             return Disposables.create()
         }
