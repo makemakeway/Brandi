@@ -11,6 +11,8 @@ import Kingfisher
 
 struct DetailView: View {
     @Environment(\.presentationMode) var mode
+    @ObservedObject private var viewModel = DetailViewModel()
+    @State var image: UIImage? = UIImage(named: "placeholder")
     let document: Document
     
     var body: some View {
@@ -40,9 +42,16 @@ struct DetailView: View {
                                     .aspectRatio(contentMode: .fit)
                                 
                             } else {
-                                
+                                Image(uiImage: image ?? UIImage(named: "placeholder")!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .onReceive(viewModel.$imageData) { data in
+                                        self.image = UIImage(data: data)
+                                    }
+                                    .onAppear {
+                                        viewModel.fetchImage(url: document.imageURL)
+                                    }
                             }
-                            
                             Text(document.displaySitename)
                             Text(document.datetime)
                                 .padding(.bottom)
@@ -52,11 +61,5 @@ struct DetailView: View {
                 }
             }
         }
-    }
-}
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(document: Document(collection: "", thumbnailURL: "", imageURL: "", width: 1, height: 1, displaySitename: "", docURL: "", datetime: ""))
     }
 }
