@@ -20,14 +20,17 @@ final class SearchView: UIView, ViewRepresentable {
         searchBar.placeholder = "검색"
         searchBar.autocapitalizationType = .none
         searchBar.autocorrectionType = .no
+        searchBar.tintColor = .black
     }
     
     func collectionViewConfig() {
         collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .white
         collectionView.keyboardDismissMode = .onDrag
     }
     
     func setUp() {
+        self.backgroundColor = .white
         addSubview(collectionView)
         collectionViewConfig()
         searchBarConfig()
