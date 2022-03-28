@@ -20,7 +20,7 @@ final class KakaoAPIService {
         case internalServerError
         case badGateway
         case serviceUnavailable
-        case networkConnection
+        case networkConnection = "네트워크 연결 상태를 확인해주세요."
         case unknownError
         case emptyData = "검색 결과가 없습니다."
     }
@@ -53,7 +53,7 @@ final class KakaoAPIService {
     func fetchSearchResponse(query: String, page: Int = 1, size: Int = 30) -> Single<Result<SearchData, APIError>> {
         return Single.create { single in
             if !(Connectivity.isConnectedToInternet) {
-                single(.failure(APIError.networkConnection))
+                single(.success(.failure(APIError.networkConnection)))
             }
             
             let params: [String:String] = [
@@ -72,9 +72,11 @@ final class KakaoAPIService {
                        headers: headers)
                 .validate().responseDecodable(of: SearchData.self) { [weak self]response in
                     if let error = self?.apiErrorHandler(status: response.response?.statusCode ?? 0) {
-                        single(.failure(error))
+                        single(.success(.failure(error)))
                     }
-                    single(.success(.success(response.value!)))
+                    if let value = response.value {
+                        single(.success(.success(value)))
+                    }
                 }
             return Disposables.create()
         }

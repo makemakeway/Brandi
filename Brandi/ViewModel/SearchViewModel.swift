@@ -49,6 +49,7 @@ final class SearchViewModel: ViewModelType {
                 }
             }
             .disposed(by: disposeBag)
+
         
         input.pageNumber
             .filter { $0 != 1 }
